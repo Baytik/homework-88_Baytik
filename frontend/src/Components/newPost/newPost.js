@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './newPost.css';
 import {connect} from "react-redux";
 import {createPost} from "../../store/actions/postsAction/postsAction";
+import {Redirect} from "react-router-dom";
 
 class NewPost extends Component {
 
@@ -23,8 +24,12 @@ class NewPost extends Component {
     };
 
     render() {
+        console.log(this.props.user);
         return (
             <div className="new-post">
+                {!this.props.user && (
+                    <Redirect to="/"/>
+                )}
                 <div className="new-post-block">
                     <span>Title</span>
                     <input
@@ -60,8 +65,12 @@ class NewPost extends Component {
     }
 }
 
+const mapStateToProps = state => ({
+    user: state.user.user
+});
+
 const mapDispatchToProps = dispatch => ({
     createPost: (post) => dispatch(createPost(post))
 });
 
-export default connect(null, mapDispatchToProps)(NewPost);
+export default connect(mapStateToProps, mapDispatchToProps)(NewPost);
