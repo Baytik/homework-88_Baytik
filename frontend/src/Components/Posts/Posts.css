@@ -1,0 +1,11 @@
+.post {
+    margin: 10px 0;
+    border: 2px solid black;
+    display: flex;
+}
+.post p {
+    color: green;
+}
+.post span {
+    color: black;
+}
