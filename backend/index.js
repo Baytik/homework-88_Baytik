@@ -3,7 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const users = require('./app/users');
-/*const tasks = require('./app/tasks');*/
+const posts = require('./app/posts');
 
 const app = express();
 const port = 8000;
@@ -19,7 +19,7 @@ const run = async () => {
         useCreateIndex: true
     });
     app.use('/users', users);
-    /*app.use('/tasks', tasks);*/
+    app.use('/posts', posts);
     app.listen(port)
 };
 
