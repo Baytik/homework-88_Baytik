@@ -6,6 +6,7 @@ import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Posts from "./Components/Posts/Posts";
 import newPost from "./Components/newPost/newPost";
+import Comments from "./Components/Comments/Comments";
 
 class App extends Component {
   render() {
@@ -16,7 +17,8 @@ class App extends Component {
               <Route path="/" exact component={Posts}/>
               <Route path="/register" component={Register}/>
               <Route path="/login" component={Login}/>
-              <Route pth="/new/post" component={newPost}/>
+              <Route path="/new_post" component={newPost}/>
+              <Route path="/comments/:id" exact component={Comments}/>
           </Switch>
         </div>
     )

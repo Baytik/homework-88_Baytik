@@ -24,12 +24,9 @@ class NewPost extends Component {
     };
 
     render() {
-        console.log(this.props.user);
+        if (!this.props.user) return <Redirect to="/login"/>;
         return (
             <div className="new-post">
-                {!this.props.user && (
-                    <Redirect to="/"/>
-                )}
                 <div className="new-post-block">
                     <span>Title</span>
                     <input

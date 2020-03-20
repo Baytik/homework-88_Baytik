@@ -23,10 +23,8 @@ export const fetchPosts = () => {
 };
 
 export const createPost = (post) => {
-    console.log(post);
     return async (dispatch, getState) => {
         const token = getState().user.user;
-        console.log(token.token);
         try {
             await axiosAPI.post('/posts', post, {headers: {'Authorization': token.token}});
             dispatch(push('/'))

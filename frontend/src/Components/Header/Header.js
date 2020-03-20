@@ -22,7 +22,7 @@ class Header extends Component {
                             <>
                                 <span>Hello, {this.props.user.username}!</span>
                                 <li>
-                                    <NavLink to="/new/post">Add new post</NavLink>
+                                    <NavLink to="/new_post">Add new post</NavLink>
                                 </li>
                                 <li>
                                     <p>or</p>

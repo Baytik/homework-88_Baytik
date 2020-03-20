@@ -19,7 +19,7 @@ class Posts extends Component {
                         <ImgThumbnail image={post.image}/>
                         <div>
                         <p>{post.datetime} <span>by: {post.user.username}</span></p>
-                            <NavLink to="/qwerty">{post.title}</NavLink>
+                            <NavLink to={`/comments/${post._id}`}>{post.title}</NavLink>
                         </div>
                     </div>
                 ))}
