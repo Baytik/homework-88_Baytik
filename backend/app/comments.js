@@ -3,18 +3,17 @@ const router = express.Router();
 const Comment = require('../models/Comment');
 const auth = require('../middleware/auth');
 
-router.get('/', async (req, res) => {
-    const comment = await Comment.find({post: req.query.post}).populate('post');
+router.get('/:id', async (req, res) => {
+    const comment = await Comment.find({post: req.params.id}).populate('post').populate('userId');
     res.send(comment)
 });
 
 router.post('/', auth, async (req, res) => {
-    console.log(req.body);
     const user = req.user;
     const object = {
         userId: user._id,
         comment: req.body.comment,
-        post: req.body.post
+        post: req.body.post,
     };
     const comment = new Comment(object);
 

@@ -29,7 +29,7 @@ class Posts extends Component {
 }
 
 const mapStateToProps = state => ({
-    posts: state.posts.posts
+    posts: state.posts.posts,
 });
 
 const mapDispatchToProps = dispatch => ({

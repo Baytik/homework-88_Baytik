@@ -5,11 +5,9 @@ import './imgThimbNail.css';
 
 const ImgThumbnail = props => {
     let image = ImageNot;
+    console.log(image)
     if (props.image) {
-        image= apiURL + '/uploads/' + props.image;
-        if (image === 'http://localhost:8000/uploads/null') {
-            return null;
-        }
+        image = apiURL + '/uploads/' + props.image;
     }
     return (
         <img src={image} alt="" className="image"/>

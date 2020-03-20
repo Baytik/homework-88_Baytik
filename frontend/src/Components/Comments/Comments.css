@@ -1,0 +1,49 @@
+.post-block {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+.post-block img {
+    margin-left: 50px;
+    width: 350px;
+    height: 200px;
+}
+.post-block h1 {
+    text-align: center;
+}
+.post-block p {
+    text-align: center;
+}
+.comment-block {
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 15px 0;
+}
+.comment-block p {
+    margin: 0;
+}
+.CommentsForm {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.CommentsForm p {
+    margin-top: 10px;
+    font-size: 24px;
+}
+.CommentsForm input {
+    font-size: 22px;
+    border: 2px solid black;
+    padding: 5px;
+    width: 450px;
+}
+.CommentsForm button {
+    font-size: 22px;
+    border: 2px solid black;
+    cursor: pointer;
+    background: white;
+    padding: 3px 7px;
+}
